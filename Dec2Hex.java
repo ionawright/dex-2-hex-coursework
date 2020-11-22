@@ -26,5 +26,9 @@ public class Dec2Hex {
         }
 
         System.out.println("Hexadecimal respresentation is: " + hexadecimal);
+
+	if(args.length <= 0) {
+		System.out.println("Cannot calculate value");
+	}
     }
 }
