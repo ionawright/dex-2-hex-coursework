@@ -50,19 +50,18 @@ s`udo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubu
 
 `sudo adduser $USER docker`
 
-newgrp docker On Linux, you can run this command to activate changes to the group.
-
+`newgrp docker` On Linux, you can run this command to activate changes to the group.
 *sudo defaults to superuser and allows the user to run programs with security privilidges of superuser.
 
-docker version Going to run this command to test we can run commands without sudo.
+`docker version` Going to run this command to test we can run commands without sudo.
 
-docker run hello-world If not able to find locally docker will pull the image down. Also given a nice message that the installation is working correctly.
+`docker run hello-world` If not able to find locally docker will pull the image down. Also given a nice message that the installation is working correctly.
 
-docker container run alpine hostname Again, we have another image alpine - it can't be found locally so docker pulls down the image
+`docker container run alpine hostname` Again, we have another image alpine - it can't be found locally so docker pulls down the image
 
-docker ps -a Shows us the containers we have just pulled down.
+`docker ps -a` Shows us the containers we have just pulled down.
 
-docker container run alpine:edge ps Run another version of alpine - specified after the : (edge)
+`docker container run alpine:edge ps` Run another version of alpine - specified after the : (edge)
 
 List all the images / containers: docker image ls -a : list all the containers, even those not running. docker ps -a : list all the containers. docker ps -l : list the last image pulled.
 
@@ -78,11 +77,11 @@ Configure Jenkins to automatically:
 ## Task 4 - Automate Tests Jenkins
 Implement automated testing as part of your Jenkins automation. You can do this using any appropriate method.
 
-One testing method implemented
-SonarQube (continuous inspection of code quality to perform automatic reviews - security vulnerabilities) SAST
+- One testing method implemented
+- SonarQube (continuous inspection of code quality to perform automatic reviews - security vulnerabilities) SAST
 
 More than one testing method implemented
-Unit tests (individual units of source code)
+- Unit tests (individual units of source code)
 
 
 ## Task 5 - Improve the java project.
