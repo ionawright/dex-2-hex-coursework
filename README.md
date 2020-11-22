@@ -1,51 +1,54 @@
 # dex-2-hex-coursework
 
-Task 1 - Github
+## Task 1 - Github
 Create the codebase locally and push up to remote private repository in github.
 
 Create Directory
-mkdir Dec2Hex
-touch Dec2Hex.java
+- `mkdir Dec2Hex`
+- `touch Dec2Hex.java`
+
 Run the java code:
-Compile: javac Dec2Hex.java
-Run: java Dec2Hex
+Compile:   `javac Dec2Hex.java`
+Run: `java Dec2Hex`
+
 Push local codebase to private remote github repo:
-git init
-git add .
-git commit -m "feat: useful message here"
-git remote add origin git@github-personal.com:ionawright/dec2hex-coursework.git
-git push origin master
-Task 2 - AWS / Docker
+- `git init`
+- `git add .`
+- `git commit -m "feat: useful message here"`
+- `git remote add origin git@github-personal.com:ionawright/dec2hex-coursework.git`
+- `git push origin master`
+
+## Task 2 - AWS / Docker
 Deploy an EC2 Instance in AWS, install Docker and launch a Jenkins container using Docker. (Lab 4)
 
 Visit https://www.awseducate.com/signin/SiteLogin?ec=302&startURL=%2Fstudent%2Fs%2F
 
 Install Docker:
 
-sudo apt-get update : downloads the package lists from the repositories and "updates" them to get information on the newest versions of packages and their dependencies.
+`sudo apt-get update` : downloads the package lists from the repositories and "updates" them to get information on the newest versions of packages and their dependencies.
 
-sudo apt-get -y remove unscd :
+`sudo apt-get -y remove unscd` :
 unscd = Micro Name Service Caching Daemon. Uninstalls software that is not required?
 
-sudo apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common Installs docker on Ubuntu. Update the apt package index and install packages to allow apt to use a repository over HTTPS: Link: https://docs.docker.com/engine/install/ubuntu/
+`sudo apt-get -y install apt-transport-https ca-certificates curl gnupg-agent software-properties-common` Installs docker on Ubuntu. Update the apt package index and install packages to allow apt to use a repository over HTTPS: Link: https://docs.docker.com/engine/install/ubuntu/
 
-curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add - Add dockers official GPG key. Linux package managers have the ability to validate the integrity of a software package before installation by verifying it's PGP (GPG) key
+`curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -` Add dockers official GPG key. Linux package managers have the ability to validate the integrity of a software package before installation by verifying it's PGP (GPG) key
 
-sudo apt-key fingerprint 0EBFCD88 Verify that you now have the key with the fingerprint 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88, by searching for the last 8 characters of the fingerprint
+`sudo apt-key fingerprint 0EBFCD88` Verify that you now have the key with the fingerprint 9DC8 5822 9FC7 DD38 854A E2D8 8D81 803C 0EBF CD88, by searching for the last 8 characters of the fingerprint
 
-sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" Set up a stable repository.
+s`udo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" Set up a stable repository.
 
-sudo apt-get update Update the apt package index (again)
+`sudo apt-get update` Update the apt package index (again)
 
-sudo apt-get -y install docker-ce docker-ce-cli containerd.io Install the latest version of Docker Engine and containerd
+`sudo apt-get -y install docker-ce docker-ce-cli containerd.io` Install the latest version of Docker Engine and containerd
 
-sudo groupadd docker Creates the docker group. If you don't want to preface the docker command with sudo creating the Unix group allows you to add users to it.
+`sudo groupadd docker` Creates the docker group. If you don't want to preface the docker command with sudo creating the Unix group allows you to add users to it.
 
-sudo usermod -aG docker $USER Add user
+`sudo usermod -aG docker $USER` Add user
 
-sudo addgroup --system docker Add users to the group (system) docker
+`sudo addgroup --system docker` Add users to the group (system) docker
 
-sudo adduser $USER docker
+`sudo adduser $USER docker`
 
 newgrp docker On Linux, you can run this command to activate changes to the group.
 
@@ -65,19 +68,22 @@ List all the images / containers: docker image ls -a : list all the containers, 
 
 After installing docker, run the jenkins container: 20. docker run --rm -d -u root --name jenkins-container -p 8080:8080 -v ~/jenkins-data:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -v "$HOME":/home jenkinsci/blueocean (Lab5)
 
-Task 3 - Jenkins
+## Task 3 - Jenkins
 Configure Jenkins to automatically:
 
-Detect changes to your remote GitHub repository
-webhook?
+Detect changes to your remote GitHub repository 
 Build your code
 Ensure that your code runs successfully
-Task 4 - Automate Tests Jenkins
+
+## Task 4 - Automate Tests Jenkins
 Implement automated testing as part of your Jenkins automation. You can do this using any appropriate method.
 
 One testing method implemented
 SonarQube (continuous inspection of code quality to perform automatic reviews - security vulnerabilities) SAST
+
 More than one testing method implemented
 Unit tests (individual units of source code)
-Task 5 - Improve the java project.
+
+
+## Task 5 - Improve the java project.
 At present, the java project you are running works even if you do not provide an input. Extend this project to return an error if no input argument is provided. Use version control appropriately to track your development process.
