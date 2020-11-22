@@ -71,9 +71,9 @@ After installing docker, run the jenkins container: 20. docker run --rm -d -u ro
 ## Task 3 - Jenkins
 Configure Jenkins to automatically:
 
-Detect changes to your remote GitHub repository 
-Build your code
-Ensure that your code runs successfully
+- Detect changes to your remote GitHub repository 
+- Build your code
+- Ensure that your code runs successfully
 
 ## Task 4 - Automate Tests Jenkins
 Implement automated testing as part of your Jenkins automation. You can do this using any appropriate method.
