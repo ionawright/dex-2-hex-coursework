@@ -89,8 +89,6 @@ Implement automated testing as part of your Jenkins automation. You can do this 
 
 Link: http://ec2-18-207-253-163.compute-1.amazonaws.com:9000/
 
-3afbc2a559bb6060a3ba89c45bf0dbd34dae666c
-
 - One testing method implemented
 - SonarQube (continuous inspection of code quality to perform automatic reviews - security vulnerabilities) SAST
 
