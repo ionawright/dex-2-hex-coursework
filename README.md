@@ -67,6 +67,14 @@ List all the images / containers: docker image ls -a : list all the containers, 
 
 After installing docker, run the jenkins container: 20. docker run --rm -d -u root --name jenkins-container -p 8080:8080 -v ~/jenkins-data:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -v "$HOME":/home jenkinsci/blueocean (Lab5)
 
+## Docker containers running: 
+
+Jenkins:
+`docker run --rm -d -u root --name jenkins-container -p 8080:8080 -v ~/jenkins-data:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -v "$HOME":/home jenkinsci/blueocean`
+
+SonarQube:
+`docker run -d --rm --name sonarqube-container -p 9000:9000 sonarqube`
+
 ## Task 3 - Jenkins
 Configure Jenkins to automatically:
 
