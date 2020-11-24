@@ -33,9 +33,6 @@ Installing Docker: https://docs.docker.com/engine/install/ubuntu/
 Run Jenkins container in Docker:
 `docker run --rm -d -u root --name jenkins-container -p 8080:8080 -v ~/jenkins-data:/var/jenkins_home -v /var/run/docker.sock:/var/run/docker.sock -v "$HOME":/home jenkinsci/blueocean`
 
-SonarQube:
-`docker run -d --rm --name sonarqube-container -p 9000:9000 sonarqube`
-
 ## Task 3 - Jenkins Automation
 
 - Detect changes from github: Job - Build Triggers - Poll SCM - Schedule ( * * * * * this means every min) 
@@ -47,6 +44,9 @@ Example AWS instance with port: http://ec2-18-207-253-163.compute-1.amazonaws.co
 
 - SonarQube (SAST) Scans static code for security vulnerabilites
 - Example AWS VM with the port: http://ec2-18-207-253-163.compute-1.amazonaws.com:9000/
+
+Run SonarQube container in Docker:
+`docker run -d --rm --name sonarqube-container -p 9000:9000 sonarqube`
 
 - Unit Tests (looking at each component, small tests to check functionality)
 - Bash script that tests each scenario, this is integrated into the jenkins execute shell to run in each check. Console prints out results. 
