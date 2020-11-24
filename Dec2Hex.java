@@ -3,6 +3,16 @@
 public class Dec2Hex {
     public static int Arg1;
     public static void main(String args[]){
+       if (args.length <= 0) {
+            System.err.println("Argument must be 1 or above.");
+            System.exit(1);
+        }
+
+	if (args.length <= 0) {
+            System.err.println("Argument must be 1 or above.");
+            System.exit(1);
+        }
+        
         if (args.length > 0) {
             try {
                 Arg1 = Integer.parseInt(args[0]);
@@ -24,11 +34,6 @@ public class Dec2Hex {
             num = num/16;
 
         }
-
         System.out.println("Hexadecimal respresentation is: " + hexadecimal);
-
-	if(args.length <= 0) {
-		System.out.println("Cannot calculate value");
-	}
     }
 }
