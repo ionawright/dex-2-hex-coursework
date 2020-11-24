@@ -5,19 +5,19 @@ public class Dec2Hex {
     public static void main(String args[]){
        if (args.length <= 0) {
             System.err.println("Argument must be 1 or above.");
-            System.exit(1);
+            System.exit(0);
         }
 
 	if (args.length <= 0) {
             System.err.println("Argument must be 1 or above.");
-            System.exit(1);
+            System.exit(0);
         }
         
         if (args.length > 0) {
             try {
                 Arg1 = Integer.parseInt(args[0]);
             } catch (NumberFormatException e) {
-                System.err.println("Argument" + args[0] + " must be an integer.");
+                System.err.println("Argument " + args[0] + " must be an integer.");
                 System.exit(1);
             }
         }
