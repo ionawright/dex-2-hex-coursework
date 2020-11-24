@@ -78,23 +78,20 @@ SonarQube:
 ## Task 3 - Jenkins
 Configure Jenkins to automatically:
 
-Link: http://ec2-18-207-253-163.compute-1.amazonaws.com:8080/
 
 - Detect changes to your remote GitHub repository 
 - Build your code
 - Ensure that your code runs successfully
 
+Example: http://ec2-18-207-253-163.compute-1.amazonaws.com:8080/
+
 ## Task 4 - Automate Tests Jenkins
-Implement automated testing as part of your Jenkins automation. You can do this using any appropriate method.
 
-Link: http://ec2-18-207-253-163.compute-1.amazonaws.com:9000/
-
-- One testing method implemented
-- SonarQube (continuous inspection of code quality to perform automatic reviews - security vulnerabilities) SAST
-
-More than one testing method implemented
-- Unit tests (individual units of source code)
+- SonarQube (SAST) Scans static code for security vulnerabilites
+- Example AWS VM with the port: http://ec2-18-207-253-163.compute-1.amazonaws.com:9000/
 
 
 ## Task 5 - Improve the java project.
-At present, the java project you are running works even if you do not provide an input. Extend this project to return an error if no input argument is provided. Use version control appropriately to track your development process.
+
+- Added another error message "argument must be 1 or above" when nothing is provided.
+- Updated the execution errors to 0 as this represents that the code was executed, where as 1 means there was an error.

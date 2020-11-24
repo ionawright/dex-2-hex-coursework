@@ -1,4 +1,3 @@
-#!/usr/bi/env bash
 dateTest=`date`
 echo
 echo "========== Starting unit tests $dateTest ============"
@@ -17,4 +16,4 @@ java Dec2Hex 1
 echo
 echo "========== End of testing at: $dateTest ==========="
 echo
-exit 1
+exit
